@@ -8,6 +8,7 @@
          update_cache: true
       become: yes
     - name: start nginx
+    - status : sudo systemctl start nginx
       service:
           name: nginx
           state: started
